@@ -96,8 +96,11 @@ m = Pseq([Pseq([s],1),
 	Pseq([r],1)
 ],inf);
 
-x= m.play(TempoClock(40/60));
+Pdef(\mplayer, m).clock_(TempoClock(40/60)).play;
+// fade out over 8 beats
+//x= m.play(TempoClock(40/60));
 
 );
 
-x.stop;
+Pdef(\mplayer, Pn(Event.silent)).fadeTime_(8);
+Pdef(\mplayer).stop;
