@@ -145,6 +145,8 @@ SynthDef(\rootsOfUnitySum, { |out=0,freq=440,amp=1,n=1,ks=#[1]|
 };
 
 
+n = SimpleMIDIFile.read( "~/notebooks/musik/midi/InfinitePiChallenge3-Violin-Cello.mid" );
+
 ~m1 = all{:ev.at(4),ev <- n.midiTrackEvents(1),ev.at(2)==\noteOn};
 ~tau1 = all{:~divisors.value(n).size,n<-~m1};
 
