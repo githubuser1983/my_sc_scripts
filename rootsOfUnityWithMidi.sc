@@ -1,3 +1,4 @@
+// How does it sound? https://www.youtube.com/watch?v=5VeNFqaQe2o
 (
 
 SynthDef(\kick, {
